@@ -1,0 +1,12 @@
+mixin cardPodcast(imagen,titulo,contenido)
+    .containerPodcast
+        figure.podcastCover
+            img(src="../assets/images/" + imagen, alt="Imagen relacionada con el Podcast")
+        article.podcastContent
+            h3.podcastContent--title= titulo
+            p.podcastContent--text= contenido
+            button.podcastContent--button Seguir
+            .podcastContent--media
+                button
+                    a(href="#")
+                        img(src="../assets/icons/icons-inicio.png", alt="Icono de forma cuadrada con triangulo en interior que hace referencia a comenzar")

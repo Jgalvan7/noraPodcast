@@ -1,0 +1,60 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    @include media(tablet) {
+        max-width: 90%;
+    }
+}
+.headerLogo {
+    margin: 10px;
+    .logoIcon {
+        min-width: 40px;
+        max-width: 60px;
+    }
+}
+.headerMenu {
+    position: absolute;
+    right: 0;
+    min-width: 260px;
+    padding: 5px;
+    .menuIcon {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        &__item {
+            img {
+                width: 40px;
+            }
+        }
+    }
+    .menuList {
+        display: none;
+    }
+    @include media(tablet) {
+        position: relative;
+        .menuIcon {
+            display: none;
+        }
+        .menuList {
+            display: flex;
+            align-items: center;
+            margin: 0 ;
+            padding: 0;
+            list-style: none;
+            &__item > a {
+                color: $color-claro;
+                margin-left: 15px;
+                padding-bottom: 2px;
+                &:hover {
+                    border-bottom: 2px solid $color-claro;
+                }
+            }
+        }
+    }
+}

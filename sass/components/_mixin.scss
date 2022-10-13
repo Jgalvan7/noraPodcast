@@ -1,0 +1,48 @@
+.containerPodcast {
+    width: 100%;
+    max-width: 350px;
+    min-width: 300px;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid $color-claro;
+    border-radius: 5px;
+    background-color: $color-primario;
+    background: linear-gradient(to bottom right, $color-secundario, $color-primario);
+    @include shadows($color-oscuro,1);
+    .podcastCover {
+        width: 150px;
+        margin: 10px auto;
+        img {
+            width: 100%;
+        }
+    }
+    .podcastContent {
+        &--title {
+            @include font-size(14px);
+        }
+        &--text {
+            display: none;
+        }
+        &--button {
+            display: none;
+        }
+        &--media {
+            display: flex;
+            justify-content: end;
+            button {
+                width: 50px;
+                border: none;
+                background: none;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @include media(tablet-m) {
+        max-width: 380px;
+    }
+    @include media(desktop) {
+        max-width: 450px;
+    }
+}

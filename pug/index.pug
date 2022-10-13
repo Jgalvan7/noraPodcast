@@ -1,0 +1,49 @@
+extend components/templates.pug
+block contenedor
+    main
+        section.heroIndex
+            h1.heroIndex--title Hello world pale blue dot.
+            p.heroIndex--text El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios del podcast, todos los jueves cada 15 días.
+            //p.heroIndex--text Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.
+            button.heroIndex--button SABER MÁS
+        section.moduloEpisodios
+            h2 Episodios
+            article.moduloEpisodios__item
+                +cardPodcast("jsParty.jpg","7 pounds of news in a 5 pound bag","Podcast sobre puntos importantes de Javascript.")
+                +cardPodcast("synTax.jpg","Syntactic Sugar, Declarative and First Class Citizens? What does that even mean?","Syntactic Sugar, que significa y como aplicarlo en el código")
+                +cardPodcast("rework.jpg","Don't be a Hero","No por mucho madrugar amanece mas temprano")
+                +cardPodcast("ruby.jpg","The Rails SaaS Conference Hype Train with Drew Bragg","La conferencia sobre The Rails SaaS Hype Train con Drew Bragg")
+        section.moduloFromWhere
+            img.moduloFromWhere--img(src="../assets/images/phone.png", alt="Imagen de un móvil mostrando una noticia")
+            article.moduloFromWhere--text
+                h3 De dónde venimos
+                p Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light.
+                p Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.
+        section.moduloInvited
+            h3.moduloInvited--title Invitadas/os estelares
+            article.moduloInvited--img
+                img(src="../assets/images/grace-hopper.png", alt="Imagen de Grace Hopper")
+                img(src="../assets/images/Katie-Bouman.png", alt="Imagen de Katie Bouman")
+                img(src="../assets/images/Margaret_Hamilton.png", alt="Imagen de Margaret Hamilton")
+                img(src="../assets/images/An-E.R.A.Univac-1103-computer-in-the-1950s.png", alt="Imagen de ERA Univac 1103")
+                img(src="../assets/images/Computer-operators.png", alt="Imagen de Operadoras")
+                img(src="../assets/images/susan-kare.png", alt="Imagen de Susan Kare")
+        section.moduloThemes
+            h3.moduloThemes--title Nuestros temas
+            article.moduloThemes--themes
+                ul.themesList
+                    li.themesList--item
+                        img(src="../assets/icons/icon1.svg", alt="")
+                        p Trabajo remoto
+                    li.themesList--item
+                        img(src="../assets/icons/icon2.svg", alt="")
+                        p Repensando la programación
+                    li.themesList--item
+                        img(src="../assets/icons/icon3.svg", alt="")
+                        p Bases del código
+                    li.themesList--item
+                        img(src="../assets/icons/icon4.svg", alt="")
+                        p Seguridad informática
+        section.moduloLastUpdate
+            h3.moduloLastUpdate--title ¿Querés las últimas novedades?
+            button.moduloLastUpdate--button ESCUCHA LOS EPISODIOS
